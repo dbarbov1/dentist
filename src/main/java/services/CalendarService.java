@@ -45,20 +45,21 @@ public class CalendarService {
     }
 
     /**
-     * @param user
+     *
+     * @param year
+     * @param month
+     * @param day
+     * @param hour
+     * @param minute
+     * @return String
      */
-    public static String createAvailablePeriod(User user, int year, int month, int day, int hour, int minute) {
-        if (user instanceof Staff && ((Staff) user).function_id == Function.DENTIST) {
-            GregorianCalendar calendar = new GregorianCalendar();
-            calendar.set(year, month, day, hour, minute);
-            if (calendarBooleanHashMap.put(calendar, false)) {
-                return "Available period is added successfully";
-            }
-            return "Failed to add available period";
+    public static String createAvailablePeriod(int year, int month, int day, int hour, int minute) {
+        GregorianCalendar calendar = new GregorianCalendar();
+        calendar.set(year, month, day, hour, minute);
+        if (calendarBooleanHashMap.put(calendar, false)) {
+            return "Available period is added successfully";
         }
-
-        return "Insufficient permissions";
-
+        return "Failed to add available period";
     }
 
     public static String bookAppointment(User user, GregorianCalendar calendar) {
