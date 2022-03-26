@@ -40,10 +40,6 @@ public class Patient implements User {
      */
     public String phone_number;
 
-    /**
-     * 
-     */
-    public int dob;
 
     /**
      * 
