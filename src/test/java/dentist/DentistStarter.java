@@ -6,6 +6,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(monochrome = true, plugin = {"pretty", "html:target/cucumber-dentist"})
+@CucumberOptions(monochrome = true, plugin = {"pretty", "html:target/cucumber-login"})
 public class DentistStarter {
 }

@@ -1,7 +1,6 @@
 package services;
 
 import interfaces.User;
-import models.Function;
 import models.Patient;
 import models.Staff;
 
