@@ -1,11 +1,12 @@
-package patient.models;
+package staff.models;
 
 import models.Patient;
-import services.CalendarService;
+import models.Staff;
 
 import java.util.GregorianCalendar;
 
-public class PatientScreenModel {
+public class StaffScreenModel {
+
     private String firstName;
     private String lastName;
     private String emailAddress;
@@ -14,16 +15,15 @@ public class PatientScreenModel {
     private GregorianCalendar calendar;
 
     public String clickBookAppointmentButton() {
-        Patient patient = new Patient(firstName, lastName, emailAddress, phone);
-        return patient.createAppointment(calendar);
+        Staff staff = new Staff();
+        return staff.createAppointment(calendar);
+    }
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public String getLastName() {
@@ -34,12 +34,12 @@ public class PatientScreenModel {
         this.lastName = lastName;
     }
 
-    public String getEmailAddress() {
-        return emailAddress;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setEmailAddress(String emailAddress) {
-        this.emailAddress = emailAddress;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getPhone() {

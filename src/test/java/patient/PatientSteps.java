@@ -50,11 +50,11 @@ public class PatientSteps {
 
     @And("^Clicks the button for booking an appointment$")
     public void clicksTheButtonForBookingAnAppointment() {
-        patientScreenModel.clickBookAppointmentButton();
+        patientScreenModel.setMessage(patientScreenModel.clickBookAppointmentButton());
     }
 
     @Then("^Sees a response message: \"([^\"]*)\"$")
-    public void seesAResponseMessage(String arg0) throws Throwable {
-        // response
+    public String seesAResponseMessage() throws Throwable {
+        return patientScreenModel.getMessage();
     }
 }

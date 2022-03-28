@@ -1,5 +1,7 @@
 package interfaces;
 
+import java.util.GregorianCalendar;
+
 public interface User{
-    public abstract void createAppointment();
+    public abstract String createAppointment(GregorianCalendar calendar);
 }

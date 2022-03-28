@@ -19,15 +19,6 @@ public class CalendarService {
     public CalendarService() {
     }
 
-    /**
-     * @param user
-     */
-    public void createAppointment(User user) {
-        // TODO implement here
-        if (user instanceof Staff) {
-
-        }
-    }
 
     /**
      * @param user
